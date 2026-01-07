@@ -103,14 +103,6 @@
 
 ---
 
-## 🎮 Demo Mode
-
-Quick login buttons are available on the login page for easy demonstration.
-
-**Setup Demo Accounts:**
-```
-http://127.0.0.1:8000/demo-setup
-```
 
 
 
