@@ -105,12 +105,13 @@
 
 ## 👥 Team Members
 
-| Name | Matric No. | Role |
-|------|-----------|------|
-| [Member 1] | [Matric] | [Role] |
-| [Member 2] | [Matric] | [Role] |
-| [Member 3] | [Matric] | [Role] |
-| [Member 4] | [Matric] | [Role] |
+| Name | Matric No. |
+|------|-----------|
+| Ghassan Bin Sharifuddin | 2112819 |
+| Ahmad Danish Qayyim Bin Azmi | 2310789 |
+| Naila Saleem | 2312934 |
+| Idham Zakwan Bin Mat Yazi | 2318121 |
+| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 |
 
 ---
 
