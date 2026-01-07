@@ -22,43 +22,7 @@ Route::get('/search', [ProductController::class, 'search'])->name('search');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
-// Demo Mode Setup Route
-Route::get('/demo-setup', function () {
-    $adminCreated = false;
-    $customerCreated = false;
-    
-    // Create admin if not exists
-    if (!\App\Models\User::where('email', 'admin@leafemart.com')->exists()) {
-        \App\Models\User::create([
-            'name' => 'Admin Demo',
-            'email' => 'admin@leafemart.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('password'),
-            'phone' => '0123456789',
-            'role' => 'admin',
-            'email_verified_at' => now(),
-        ]);
-        $adminCreated = true;
-    }
-    
-    // Create customer demo if not exists
-    if (!\App\Models\User::where('email', 'aqilikhwan@gmail.com')->exists()) {
-        \App\Models\User::create([
-            'name' => 'Aqil Ikhwan (Demo)',
-            'email' => 'aqilikhwan@gmail.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('qwertyuiop'),
-            'phone' => '0198765432',
-            'role' => 'customer',
-            'email_verified_at' => now(),
-        ]);
-        $customerCreated = true;
-    }
-    
-    return redirect()->route('login')->with('success', 
-        'Demo accounts ready! ' . 
-        ($adminCreated ? 'Admin created. ' : 'Admin exists. ') .
-        ($customerCreated ? 'Customer created.' : 'Customer exists.')
-    );
-})->name('demo.setup');
+// Authentication routes
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);

@@ -103,24 +103,6 @@
 
 ---
 
-## 🎮 Demo Mode
-
-Quick login buttons are available on the login page for easy demonstration.
-
-**Setup Demo Accounts:**
-```
-http://127.0.0.1:8000/demo-setup
-```
-
-**Demo Credentials:**
-
-| Role | Email | Password |
-|------|-------|----------|
-| 👤 Customer | aqilikhwan@gmail.com | qwertyuiop |
-| 🔧 Admin | admin@leafemart.com | password |
-
----
-
 ## 👥 Team Members
 
 | Name | Matric No. |
