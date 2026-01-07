@@ -9,6 +9,18 @@
 
 ---
 
+## 👥 Team Members
+
+| Name | Matric No. |
+|------|-----------|
+| Ghassan Bin Sharifuddin | 2112819 |
+| Ahmad Danish Qayyim Bin Azmi | 2310789 |
+| Naila Saleem | 2312934 |
+| Idham Zakwan Bin Mat Yazi | 2318121 |
+| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 |
+
+---
+
 ## ✨ Features
 
 ### Customer Features
@@ -101,19 +113,18 @@
    http://127.0.0.1:8000
    ```
 
----
 
+<<<<<<< HEAD
 ## 👥 Team Members
+=======
 
-| Name | Matric No. |
-|------|-----------|
-| Ghassan Bin Sharifuddin | 2112819 |
-| Ahmad Danish Qayyim Bin Azmi | 2310789 |
-| Naila Saleem | 2312934 |
-| Idham Zakwan Bin Mat Yazi | 2318121 |
-| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 |
+
 
 ---
+
+>>>>>>> 9679ffbf1b58a7033ec40325480446c5d0759829
+
+
 
 ## 📸 Screenshots
 
@@ -157,7 +168,7 @@ leafemart/
 
 ## 📄 License
 
-This project is developed for educational purposes as part of the Web Application Development course at IIUM.
+This project is developed for educational purposes as part of the Web Application Development (INFO 3305) course at IIUM.
 
 ---
 
