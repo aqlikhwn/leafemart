@@ -118,16 +118,20 @@
 ## 📸 Screenshots
 
 ### Homepage
-*Welcome page with featured products carousel and category browsing*
+<img width="1896" height="941" alt="image" src="https://github.com/user-attachments/assets/e05143c1-e5d6-40ca-aa3a-86e36b2d8b8b" />
+
 
 ### Browse Products
-*Product grid with category filters and search*
+<img width="1904" height="945" alt="image" src="https://github.com/user-attachments/assets/75516ee6-9496-4bfa-b555-9c802672718b" />
+
 
 ### Shopping Cart
-*Cart with variation support and quantity controls*
+<img width="1906" height="943" alt="image" src="https://github.com/user-attachments/assets/83de9d06-894c-4777-977e-3f8d6de1725d" />
+
 
 ### Admin Dashboard
-*Admin panel with statistics and management tools*
+<img width="1903" height="911" alt="image" src="https://github.com/user-attachments/assets/ec2dc163-bd64-4809-a73b-aba25601c030" />
+
 
 ---
 
