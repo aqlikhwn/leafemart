@@ -107,10 +107,13 @@
 
 Quick login buttons are available on the login page for easy demonstration.
 
-**Setup Demo Accounts:**
-```
-http://127.0.0.1:8000/demo-setup
-```
+| Link | Description |
+|------|-------------|
+| [🏠 Homepage](http://127.0.0.1:8000/) | Main landing page |
+| [🔐 Login Page](http://127.0.0.1:8000/login) | Login with demo buttons |
+| [⚙️ Setup Demo Accounts](http://127.0.0.1:8000/demo-setup) | Auto-create demo accounts |
+| [🛍️ Browse Products](http://127.0.0.1:8000/browse) | View all products |
+| [🔧 Admin Dashboard](http://127.0.0.1:8000/admin) | Admin panel (login required) |
 
 **Demo Credentials:**
 
