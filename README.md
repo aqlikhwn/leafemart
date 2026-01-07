@@ -161,7 +161,7 @@ leafemart/
 
 ## 📄 License
 
-This project is developed for educational purposes as part of the Web Application Development course at IIUM.
+This project is developed for educational purposes as part of the Web Application Development (INFO 3305) course at IIUM.
 
 ---
 
