@@ -30,9 +30,9 @@
 |------|-----------|---------------|
 | Ghassan Bin Sharifuddin | 2112819 | Project Scope & Constraints |
 | Ahmad Danish Qayyim Bin Azmi | 2310789 | Coding (Views & Models) |
-| Naila Saleem | 2312934 | Significance & Coding (Routes & Controllers) |
-| Idham Zakwan Bin Mat Yazi | 2318121 | Introduction, Problem & Objectives |
-| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Demo & System Development |
+| Naila Saleem | 2312934 | Introduction, Problem & Objectives |
+| Idham Zakwan Bin Mat Yazi | 2318121 | Significance & Coding (Routes & Controllers) |
+| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Demo, Midlleware & System Development |
 
 ---
 
@@ -620,22 +620,7 @@ erDiagram
 
 ---
 
-### 📱 Suggested Additional Screenshots
 
-| # | Page | URL | Description |
-|---|------|-----|-------------|
-| 1 | Login | `/login` | Authentication page |
-| 2 | Register | `/register` | User signup form |
-| 3 | Product Detail | `/product/{id}` | Single product with variations |
-| 4 | Checkout | `/checkout` | Order placement |
-| 5 | Order History | `/orders` | Past orders list |
-| 6 | Notifications | `/notifications` | User notifications |
-| 7 | Profile | `/profile` | User profile page |
-| 8 | FAQ | `/faq` | Frequently asked questions |
-| 9 | About | `/about` | About us page |
-| 10 | Admin Products | `/admin/products` | Product management |
-| 11 | Admin Orders | `/admin/orders` | Order management |
-| 12 | Admin Users | `/admin/users` | User management |
 
 ---
 
