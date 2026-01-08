@@ -355,7 +355,7 @@ The ProfileController manages user profile and account-related functions. It all
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/aqilfrhn/leafemart.git
+   git clone https://github.com/aqlikhwn/leafemart.git
    cd leafemart
    ```
 
