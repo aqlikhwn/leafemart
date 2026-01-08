@@ -1,11 +1,13 @@
 # 🌿 Leafé Mart
 
-**Leafé Mart** is an online mini-market platform designed for Mahallah Bilal residents and IIUM students. Shop for everyday essentials, snacks, drinks, and more — all from the comfort of your room!
+**Leafé Mart Mahallah Bilal Web Application** is an e-commerce platform developed for the residents of Mahallah and students of IIUM. The application aims to transform the current purchasing activities into a convenient, modern, and user-friendly digital shopping experience.
 
 ![Laravel](https://img.shields.io/badge/Laravel-12.x-red?logo=laravel)
 ![PHP](https://img.shields.io/badge/PHP-8.2+-purple?logo=php)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
 ![Livewire](https://img.shields.io/badge/Livewire-3.x-pink?logo=livewire)
+
+**GitHub Link:** https://github.com/aqilfrhn/leafemart
 
 ---
 
@@ -18,6 +20,7 @@
 | **Section** | 3 |
 | **Group** | 4 |
 | **Kulliyyah** | Information & Communication Technology (KICT) |
+| **Lecturer** | Dr. Najhan Bin Muhamad Ibrahim |
 
 ---
 
@@ -29,85 +32,129 @@
 | Ahmad Danish Qayyim Bin Azmi | 2310789 | Coding (Views & Models) |
 | Naila Saleem | 2312934 | Significance & Coding (Routes & Controllers) |
 | Idham Zakwan Bin Mat Yazi | 2318121 | Introduction, Problem & Objectives |
-| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Demo & System Development |
+| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Project Objective & Coding |
 
 ---
 
-## 🔴 Problem Statement
+## � 1.1 Introduction
 
-Living in university hostels comes with unique challenges when it comes to shopping for daily essentials:
+The Leafé Mart Mahallah Bilal Web Application is an e-commerce platform developed for the residents of Mahallah and students of IIUM. The application aims to transform the current purchasing activities into a convenient, modern, and user-friendly digital shopping experience.
 
-1. **Limited Access to Shops** - Students in Mahallah Bilal have limited access to nearby convenience stores
-2. **Time Constraints** - Busy schedules with classes, assignments, and activities make shopping trips difficult
-3. **Inconvenient Shopping Hours** - Physical shops have fixed operating hours
-4. **No Centralized Platform** - No dedicated online platform exists for mahallah residents
+Currently, most shopping within Mahallah Bilal relies on physical visits to the mart, a process that can be time-consuming, particularly during peak hours, exam seasons, or when students have tight schedules. This web application addresses this challenge by providing a solution for online purchasing.
 
----
-
-## 🎯 Project Objectives
-
-1. Develop a user-friendly e-commerce platform accessible 24/7
-2. Implement a complete shopping system with cart, checkout, and order tracking
-3. Provide administrative tools for product and order management
-4. Ensure secure and reliable user authentication
+This project delivers a fully functional web application enabling users to browse products, check availability, view prices, and make seamless purchases online. The platform features a modern, clean visual design and a responsive layout to ensure an aesthetically pleasing and consistent experience on both mobile and desktop screens.
 
 ---
 
-## 📐 Project Scope
+## 🔴 1.2 Problem Description
 
-### Customer Features
-- User registration and login with email verification
-- Browse products by categories (Food, Drinks, Toiletries, Stationery, Medication)
-- Search products by name
-- View product details with variations (sizes, flavors)
-- Shopping cart with quantity management
-- Checkout with delivery or self-pickup options
-- Order history and status tracking
-- Notification system for order updates
+### 1.2.1 Background of the Problem
 
-### Admin Features
-- Dashboard with statistics and activity logs
-- Product management (CRUD) with variations
+The students experience challenges like a tight class timetable, uncertain stock, and a long queue of people lining up especially when it comes to peak hours. There is no online platform for users to search for items available for purchase in advance and store information.
+
+Because of the growing dependency on online services in IIUM campuses, as well as for the convenience of Mahallah residents, a web application will provide a way for Leafé Mart to upgrade and simplify their operation. This application would benefit users with an organized, accessible, and user-friendly means of dealing with the store without requiring their presence.
+
+### 1.2.2 Problem Statement
+
+1. **No Online Product Visibility** — Users cannot check for the product availability, view prices, or categories without physically visiting the store.
+
+2. **Limited Operating Hours Information** — Students cannot know if the store is open or closed without checking physically.
+
+3. **No Order or Reservation System** — Students cannot order or reserve items, which could lead to disappointment when the items run out of stock.
+
+4. **Inefficient Inventory Updates** — Staff operators manually track the stock, which may cause some errors and delays.
+
+5. **Long Queues and Congestion** — During peak hours, the store gets crowded, causing slow checkout and inconvenience.
+
+---
+
+## 🎯 1.3 Project Objectives
+
+The project objectives are as follows:
+
+1. **To make shopping process digitalized**
+   - By giving students an easy-to-use online platform to browse products, check prices, and see stock availability.
+
+2. **To assist Leafé Mart staff in managing operations**
+   - Provide an admin dashboard for managing products, categories, stock, orders, and announcements in a systematic manner.
+
+3. **To enhance user experience**
+   - Develop a modern, responsive, and user-friendly interface accessible on both mobile and desktop devices.
+
+4. **To reduce long queues and overcrowding**
+   - By offering an online alternative that allows students to check items and place simulated orders without physically visiting the mart during peak hours.
+
+5. **To approve communication with customers**
+   - By providing clear and timely updates, operational hours, and announcements directly through web applications.
+
+---
+
+## 📐 1.4 Project Scope
+
+The scope of the Leafé Mart Mahallah Bilal Web Application focuses on digitalizing the current purchasing experience and improving operational efficiency. The system includes essential customer-facing features for browsing and purchasing, as well as internal administrative module to help staff manage products and inventory more effectively.
+
+### Customer Module
+- User registration & login
+- Browse and search products
+- Add to cart, checkout, payment simulation
+- Order tracking
+- View order history
+- Notifications & announcements
+
+### Admin Module
+- Admin authentication
+- Product management (CRUD)
 - Category management
-- Order management with status updates
+- Order management
 - User management
-- FAQ management
-- Announcement system
 
 ---
 
-## ⚠️ Constraints
+## ⚠️ 1.5 Constraints
 
-**Technical Constraints:**
-- Limited to PHP/Laravel framework
-- Database hosted locally using XAMPP/MySQL
-- No payment gateway integration (Cash on Delivery/Pickup only)
+The development of the Leafé Mart web application is subject to several limitations that may affect the design, functionality, and timeline of the project. These constraints include:
 
-**Time Constraints:**
-- Development completed within semester timeframe
+### Technical Constraints
+- No real-time connection to the physical store's actual inventory; stock updates depend on manual input from staff.
+- Payment gateway integration may not be implemented due to time and budget restrictions; transactions may be simulated.
+- The system relies on the team's understanding of Laravel, which may require additional learning time.
+- Deployment is limited to available resources, such as localhost if hosting is unavailable.
 
-**Scope Limitations:**
-- Designed for single mahallah use
-- Web-based only (no mobile app)
-- No real-time delivery tracking
+### Network Requirements
+1. Stable internet connection
+2. Browser access (Chrome, Firefox)
+
+### Additional Infrastructure Limitations
+If the Kulliyyah does not provide a hosting server, the project will be demonstrated on a localhost to ensure smooth execution. Alternatively, free hosting options or temporary educational hosting platforms may be considered to allow online deployment for presentation purposes. This approach ensures that the development continues without interruption, despite any institutional limitations.
 
 ---
 
-## 💡 Significance of the Project
+## 📅 1.6 Project Stages
 
-**For Students:**
-- Convenience — Shop anytime, anywhere
-- Time Saving — No need to travel to distant shops
-- Easy Access — Browse and order in minutes
+| Phase | Activity | Duration | Start | Finish |
+|-------|----------|----------|-------|--------|
+| 1 | Requirement Gathering | 3 weeks | 6/10/2024 | 27/10/2024 |
+| 2 | Project Unit Development | 1 week | 27/10/2024 | 3/11/2024 |
+| 3 | Database Design & Development | 1 week | 27/10/2024 | 3/11/2024 |
+| 4 | Implementation | 4 weeks | 3/11/2024 | 1/12/2024 |
+| 5 | Integration & Testing | 2 weeks | 1/12/2024 | 15/12/2024 |
+| 6 | Report Writing & Presentation | 2 weeks | 15/12/2024 | 29/12/2024 |
 
-**For the Community:**
-- Supports local economy within campus
-- Creates centralized platform for residents
+---
 
-**Educational Value:**
-- Application of MVC architecture
-- Real-world CRUD implementation
-- Web application development lifecycle
+## 💡 1.7 Significance of the Project
+
+### For Students (19-25 years old)
+1. Provides a convenient way to browse products, check prices, and view stock availability anytime.
+2. Reduces long queues and unnecessary trips to the mart during peak hours.
+3. Helps students plan their purchases better with updated information and stock availability.
+4. Offers a smoother and more modern shopping experience through a responsive interface.
+
+### For Leafé Mart Staff (25-50 years old)
+1. Simplifies daily tasks with an organized admin panel for product and inventory management.
+2. Reduces errors caused by manual stock tracking or inconsistent updates.
+3. Saves time by reducing repeated customer enquiries about item availability or pricing.
+4. Improves workflow through a systemized order and category management process.
 
 ---
 
@@ -158,7 +205,7 @@ Living in university hostels comes with unique challenges when it comes to shopp
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/leafemart.git
+   git clone https://github.com/aqilfrhn/leafemart.git
    cd leafemart
    ```
 
@@ -205,6 +252,14 @@ Living in university hostels comes with unique challenges when it comes to shopp
 
 ---
 
+## 📝 1.9 Summary
+
+This report outlines a complete Laravel MVC web application designed to digitalize Leafé Mart Mahallah Bilal's operation. The system addresses key problems such as lack of online product visibility, long queues, manual stock tracking, and limited operational information.
+
+The project aims to create a user-friendly platform where students can browse items, check stock, and place simulated orders, while staff and management benefit from organized product, inventory, and announcement management. By the end of the project, the team delivered a responsive, modern, and efficient e-commerce application that enhances convenience for students and improves operational workflow for Leafé Mart.
+
+---
+
 ## 📸 Screenshots
 
 ### Homepage
@@ -241,6 +296,14 @@ leafemart/
 
 ---
 
+## 📚 1.10 References
+
+- Laravel Documentation
+- Livewire Documentation
+- IIUM Course Materials (INFO 3305)
+
+---
+
 ## 📄 License
 
 This project is developed for educational purposes as part of the Web Application Development (INFO 3305) course at IIUM.
@@ -251,5 +314,6 @@ This project is developed for educational purposes as part of the Web Applicatio
 
 - **International Islamic University Malaysia (IIUM)**
 - **Kulliyyah of Information & Communication Technology (KICT)**
+- **Dr. Najhan Bin Muhamad Ibrahim** (Lecturer)
 - **Laravel Framework**
 - **Livewire**
