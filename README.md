@@ -32,7 +32,7 @@
 | Ahmad Danish Qayyim Bin Azmi | 2310789 | Coding (Views & Models) |
 | Naila Saleem | 2312934 | Significance & Coding (Routes & Controllers) |
 | Idham Zakwan Bin Mat Yazi | 2318121 | Introduction, Problem & Objectives |
-| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Project Objective & Coding |
+| Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Demo & System Development |
 
 ---
 
