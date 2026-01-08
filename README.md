@@ -7,7 +7,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
 ![Livewire](https://img.shields.io/badge/Livewire-3.x-pink?logo=livewire)
 
-**GitHub Link:** https://github.com/aqilfrhn/leafemart
+**GitHub Link:** https://github.com/aqlikhwn/leafemart
 
 ---
 
@@ -552,31 +552,38 @@ erDiagram
 
 #### Product Detail
 *Individual product page with variations and add to cart*
-<!-- TODO: Add screenshot - Navigate to any product detail page -->
+<img width="1908" height="910" alt="image" src="https://github.com/user-attachments/assets/3499422d-c8ca-44c0-822d-87858113baeb" />
+
 
 #### Checkout Page
 *Order summary and delivery method selection*
-<!-- TODO: Add screenshot - Go to /checkout with items in cart -->
+<img width="1904" height="911" alt="image" src="https://github.com/user-attachments/assets/65184bf4-2a73-4a1f-88d1-a7f524503570" />
+
 
 #### Order History
 *User's past orders with status filters*
-<!-- TODO: Add screenshot - Go to /orders while logged in -->
+<img width="1906" height="910" alt="image" src="https://github.com/user-attachments/assets/a088202d-986c-4f3b-9a2a-03517c89ceb2" />
+
 
 #### Login Page
 *User authentication with remember me option*
-<!-- TODO: Add screenshot - Go to /login -->
+<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/50dec01d-4b80-4fbb-a14f-48359f2ec904" />
+
 
 #### Registration Page
 *New user signup form*
-<!-- TODO: Add screenshot - Go to /register -->
+<img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/dbffcd03-c8b1-49c8-bd05-2e9415fce9a3" />
+
 
 #### Notifications
 *User notification center with filtering*
-<!-- TODO: Add screenshot - Go to /notifications while logged in -->
+<img width="1905" height="913" alt="image" src="https://github.com/user-attachments/assets/4e6948e8-8e64-45d1-ba6b-b8d4e9629d33" />
+
 
 #### Profile Settings
 *User profile management and password change*
-<!-- TODO: Add screenshot - Go to /profile/settings -->
+<img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/a2a7675d-f565-403e-b4b6-07b7ab649649" />
+
 
 ---
 
@@ -588,23 +595,28 @@ erDiagram
 
 #### Product Management
 *Admin product list with CRUD operations*
-<!-- TODO: Add screenshot - Go to /admin/products -->
+<img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/5d442160-d8d9-463c-b4c9-98f5d4ff532d" />
+
 
 #### Add/Edit Product
 *Product form with variation management*
-<!-- TODO: Add screenshot - Go to /admin/products/create -->
+<img width="1902" height="910" alt="image" src="https://github.com/user-attachments/assets/d7238ffc-4777-4ca8-9253-18d8736e8497" />
+
 
 #### Category Management
 *Category list and management*
-<!-- TODO: Add screenshot - Go to /admin/categories -->
+<img width="1904" height="912" alt="image" src="https://github.com/user-attachments/assets/256bb4a7-77f6-45c6-a6dd-e983b60ccf4d" />
+
 
 #### Order Management
 *All orders with status update functionality*
-<!-- TODO: Add screenshot - Go to /admin/orders -->
+<img width="1903" height="911" alt="image" src="https://github.com/user-attachments/assets/1bcbf3ec-d963-4090-9f24-94fd580080c4" />
+
 
 #### User Management
 *Customer list and details*
-<!-- TODO: Add screenshot - Go to /admin/users -->
+<img width="1905" height="907" alt="image" src="https://github.com/user-attachments/assets/bb2693bd-42c0-4e9f-8f7a-2c0e99c98508" />
+
 
 ---
 
