@@ -158,6 +158,156 @@ If the Kulliyyah does not provide a hosting server, the project will be demonstr
 
 ---
 
+## 💻 1.8 Coding
+
+### a) Public Routes
+Accessible to everyone (no login required):
+- `/` — Homepage
+- `/browse` — Browse products
+- `/product/{id}` — View product details
+- `/search` — Product search
+- `/about`, `/faq` — Static pages
+
+These routes allow general users to explore the platform.
+
+### b) Demo Setup Route
+- `/demo-setup`
+  - Automatically creates:
+    - Admin demo account
+    - Customer demo account
+  - Used for testing
+  - Redirects to login after setup
+
+Helps simulate a real e-commerce system.
+
+### c) Authentication Routes (Guest Only)
+For users who are not logged in:
+- Login
+- Register
+- Forgot password
+- Reset password
+- Resend reset code
+
+Handles user access and account recovery.
+
+### d) Email Verification Routes
+For logged-in users:
+- Email verification notice
+- Send verification code
+- Verify email
+- Resend code
+
+Ensures account security and valid users.
+
+### e) Authenticated Customer Routes
+For logged-in customers:
+- **Cart**: View, add, update, remove, clear items
+- **Orders**: Checkout, place order, view history, cancel
+- **Profile**: View, update, change password, delete account
+- **Notifications**: View, mark as read
+
+Core shopping and user management features.
+
+### f) Admin Routes
+For administrators (`/admin` prefix):
+- **Dashboard**: Statistics and activity logs
+- **Products**: Full CRUD operations
+- **Categories**: Full CRUD operations
+- **Orders**: View and update status
+- **Variations**: Manage product variations
+- **Messages**: Customer inquiries
+- **Users**: View and manage
+- **FAQs**: Full CRUD operations
+- **Announcements**: Create and send
+
+Applies authentication and role control.
+
+---
+
+### Controllers
+
+#### 1. OrderController.php
+The OrderController manages the order process for users. It allows users to view their order history, add items to orders, and complete order checkout. Additionally, the controller allows users to view order details, check order status, and cancel pending orders, while automatically generating notifications for both customers and administrators.
+
+#### 2. ProductController.php
+The ProductController manages product browsing and display functions for users. It allows users to browse products by category, view individual product details, and search for products using keywords. This controller ensures that only active and in-stock products are shown, and it also displays related products to improve user experience and product discovery.
+
+#### 3. ProfileController.php
+The ProfileController manages user profile and account-related functions. It allows authenticated users to view and update personal information, change passwords, and manage profile actions. This controller also handles user notifications, including viewing, filtering, marking notifications as read, and redirecting users based on notification actions. Additionally, it provides functionality for secure account deletion, ensuring all related user data is properly removed.
+
+---
+
+### Models
+
+#### 1. ActivityLog.php
+**Purpose:** This model tracks and stores system activities such as admin actions, user interactions, and system events.
+**Explanation:** It is linked to a user and supports dynamic icons and colors based on action type. A static `log()` method simplifies recording activities across the system.
+
+#### 2. Announcement.php
+**Purpose:** This model manages system announcements displayed to users.
+**Explanation:** It stores announcement title, content, and activation status. The active scope allows the system to easily retrieve only announcements that are currently visible to users.
+
+#### 3. Cart.php
+**Purpose:** This model represents items added to a user's shopping cart.
+**Explanation:** It links users with products and stores selected variations and quantities. The subtotal accessor automatically calculates the total price per cart item, considering product variations if applicable.
+
+#### 4. Category.php
+**Purpose:** This model manages product categories.
+**Explanation:** Each category contains multiple products and includes attributes such as name, icon, and description. It helps organize products for browsing and filtering in the e-commerce system.
+
+#### 5. Faq.php
+**Purpose:** This model stores frequently asked questions for users.
+**Explanation:** Each FAQ entry includes a question and an answer. It provides a simple way to display helpful information.
+
+#### 6. Message.php
+**Purpose:** This model manages customer messages or inquiries.
+**Explanation:** It tracks the sender (user), subject, content, and status. It supports replies and read status for admin management.
+
+#### 7. Notification.php
+**Purpose:** This model handles user notifications.
+**Explanation:** Notifications include title, message, type, and read status. They support icons, colors, and redirection links based on notification type.
+
+#### 8. Order.php
+**Purpose:** This model represents customer orders.
+**Explanation:** Orders include user reference, total amount, status, payment status, and delivery details. It links to order items and calculates totals.
+
+#### 9. OrderItem.php
+**Purpose:** This model stores individual items within an order.
+**Explanation:** It references products, stores quantity, price, and variation. It calculates subtotals for each line item.
+
+#### 10. Product.php
+**Purpose:** This model manages products in the system.
+**Explanation:** Products include name, description, price, stock, and featured status. They belong to categories and can have multiple variations.
+
+#### 11. ProductVariation.php
+**Purpose:** This model manages product variations such as size or type.
+**Explanation:** Each variation belongs to a product and may have its own price and stock. Query scopes help retrieve only active or in-stock variations.
+
+#### 12. User.php
+**Purpose:** This model manages system users, including customers and administrators.
+**Explanation:** It stores user credentials, profile information, roles, and verification status. The model defines relationships with carts, orders, and notifications, and includes role-checking methods for access control.
+
+---
+
+### Views (Blade Files)
+
+| # | File | Purpose |
+|---|------|---------|
+| 1 | about.blade.php | Displays the About Us page |
+| 2 | browse.blade.php | Shows the product browsing page |
+| 3 | cart.blade.php | Shopping cart view |
+| 4 | checkout.blade.php | Checkout process page |
+| 5 | faq.blade.php | Frequently asked questions |
+| 6 | home.blade.php | Homepage with featured products |
+| 7 | notifications.blade.php | User notifications page |
+| 8 | orders.blade.php | My orders/order history |
+| 9 | order-detail.blade.php | Individual order details |
+| 10 | product.blade.php | Product detail page |
+| 11 | profile.blade.php | User profile view |
+| 12 | profile-settings.blade.php | Profile settings/edit |
+
+---
+
 ## ✨ Features
 
 ### Customer Features
@@ -260,19 +410,220 @@ The project aims to create a user-friendly platform where students can browse it
 
 ---
 
+## 📊 Entity Relationship Diagram (ERD)
+
+```mermaid
+erDiagram
+    USERS ||--o{ ORDERS : places
+    USERS ||--o{ CARTS : has
+    USERS ||--o{ NOTIFICATIONS : receives
+    USERS ||--o{ MESSAGES : sends
+    USERS ||--o{ ACTIVITY_LOGS : generates
+    
+    ORDERS ||--|{ ORDER_ITEMS : contains
+    ORDER_ITEMS }o--|| PRODUCTS : references
+    
+    PRODUCTS }o--|| CATEGORIES : belongs_to
+    PRODUCTS ||--o{ PRODUCT_VARIATIONS : has
+    PRODUCTS ||--o{ CARTS : added_to
+    
+    USERS {
+        int id PK
+        string name
+        string email UK
+        string password
+        string phone
+        string role
+        timestamp email_verified_at
+    }
+    
+    PRODUCTS {
+        int id PK
+        string name
+        text description
+        decimal price
+        int stock
+        int category_id FK
+        string image
+        boolean is_featured
+        boolean is_active
+    }
+    
+    CATEGORIES {
+        int id PK
+        string name
+        string icon
+        text description
+    }
+    
+    ORDERS {
+        int id PK
+        int user_id FK
+        decimal total
+        string status
+        string payment_status
+        string delivery_method
+        text address
+    }
+    
+    ORDER_ITEMS {
+        int id PK
+        int order_id FK
+        int product_id FK
+        int quantity
+        decimal price
+        string variation
+    }
+    
+    CARTS {
+        int id PK
+        int user_id FK
+        int product_id FK
+        int quantity
+        string variation
+    }
+    
+    PRODUCT_VARIATIONS {
+        int id PK
+        int product_id FK
+        string name
+        decimal price
+        int stock
+        boolean is_active
+    }
+    
+    NOTIFICATIONS {
+        int id PK
+        int user_id FK
+        string title
+        text message
+        string type
+        boolean is_read
+        string link
+    }
+    
+    MESSAGES {
+        int id PK
+        int user_id FK
+        string subject
+        text content
+        string status
+        text reply
+    }
+    
+    ANNOUNCEMENTS {
+        int id PK
+        string title
+        text content
+        boolean is_active
+    }
+    
+    FAQS {
+        int id PK
+        string question
+        text answer
+    }
+    
+    ACTIVITY_LOGS {
+        int id PK
+        int user_id FK
+        string action
+        text description
+    }
+```
+
+---
+
 ## 📸 Screenshots
 
-### Homepage
+### Customer Interface
+
+#### Homepage
+*Welcome page with featured products carousel and category browsing*
 <img width="1896" height="941" alt="image" src="https://github.com/user-attachments/assets/e05143c1-e5d6-40ca-aa3a-86e36b2d8b8b" />
 
-### Browse Products
+#### Browse Products
+*Product grid with category filters and search functionality*
 <img width="1904" height="945" alt="image" src="https://github.com/user-attachments/assets/75516ee6-9496-4bfa-b555-9c802672718b" />
 
-### Shopping Cart
+#### Shopping Cart
+*Cart with variation support and quantity controls*
 <img width="1906" height="943" alt="image" src="https://github.com/user-attachments/assets/83de9d06-894c-4777-977e-3f8d6de1725d" />
 
-### Admin Dashboard
+#### Product Detail
+*Individual product page with variations and add to cart*
+<!-- TODO: Add screenshot - Navigate to any product detail page -->
+
+#### Checkout Page
+*Order summary and delivery method selection*
+<!-- TODO: Add screenshot - Go to /checkout with items in cart -->
+
+#### Order History
+*User's past orders with status filters*
+<!-- TODO: Add screenshot - Go to /orders while logged in -->
+
+#### Login Page
+*User authentication with remember me option*
+<!-- TODO: Add screenshot - Go to /login -->
+
+#### Registration Page
+*New user signup form*
+<!-- TODO: Add screenshot - Go to /register -->
+
+#### Notifications
+*User notification center with filtering*
+<!-- TODO: Add screenshot - Go to /notifications while logged in -->
+
+#### Profile Settings
+*User profile management and password change*
+<!-- TODO: Add screenshot - Go to /profile/settings -->
+
+---
+
+### Admin Interface
+
+#### Admin Dashboard
+*Dashboard with statistics, recent orders, and activity logs*
 <img width="1903" height="911" alt="image" src="https://github.com/user-attachments/assets/ec2dc163-bd64-4809-a73b-aba25601c030" />
+
+#### Product Management
+*Admin product list with CRUD operations*
+<!-- TODO: Add screenshot - Go to /admin/products -->
+
+#### Add/Edit Product
+*Product form with variation management*
+<!-- TODO: Add screenshot - Go to /admin/products/create -->
+
+#### Category Management
+*Category list and management*
+<!-- TODO: Add screenshot - Go to /admin/categories -->
+
+#### Order Management
+*All orders with status update functionality*
+<!-- TODO: Add screenshot - Go to /admin/orders -->
+
+#### User Management
+*Customer list and details*
+<!-- TODO: Add screenshot - Go to /admin/users -->
+
+---
+
+### 📱 Suggested Additional Screenshots
+
+| # | Page | URL | Description |
+|---|------|-----|-------------|
+| 1 | Login | `/login` | Authentication page |
+| 2 | Register | `/register` | User signup form |
+| 3 | Product Detail | `/product/{id}` | Single product with variations |
+| 4 | Checkout | `/checkout` | Order placement |
+| 5 | Order History | `/orders` | Past orders list |
+| 6 | Notifications | `/notifications` | User notifications |
+| 7 | Profile | `/profile` | User profile page |
+| 8 | FAQ | `/faq` | Frequently asked questions |
+| 9 | About | `/about` | About us page |
+| 10 | Admin Products | `/admin/products` | Product management |
+| 11 | Admin Orders | `/admin/orders` | Order management |
+| 12 | Admin Users | `/admin/users` | User management |
 
 ---
 
