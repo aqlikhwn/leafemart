@@ -26,9 +26,9 @@
 | Name | Matric No. | Assigned Task |
 |------|-----------|---------------|
 | Ghassan Bin Sharifuddin | 2112819 | Project Scope & Constraints |
-| Ahmad Danish Qayyim Bin Azmi | 2310789 | Coding (Views & Models) |
-| Naila Saleem | 2312934 | Significance & Coding (Routes & Controllers) |
-| Idham Zakwan Bin Mat Yazi | 2318121 | Introduction, Problem & Objectives |
+| Ahmad Danish Qayyim Bin Azmi | 2310789 | Summary & Coding (Views & Models) |
+| Naila Saleem | 2312934 | Significance & Introduction, Problem |
+| Idham Zakwan Bin Mat Yazi | 2318121 | Coding (Routes & Controllers) & Objectives |
 | Muhamad Aqil Ikhwan Bin Ab Rahman | 2215761 | Demo & System Development |
 
 ---
